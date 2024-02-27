@@ -21,11 +21,11 @@ const userSchema = new Schema(
         message: (props) => `${props.value} is not a valid email!`,
       },
     },
-    thoughts: {
-      type: String,
-      required: true,
-      max_length: 50,
-    },
+    // thoughts: {
+    //   type: String,
+    //   required: true,
+    //   max_length: 50,
+    // },
     thoughts: [
       {
         type: Schema.Types.ObjectId,
