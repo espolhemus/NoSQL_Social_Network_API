@@ -28,6 +28,8 @@ router
 .put(updateThought)
 .delete(deleteThought);
 
+// router.route('/:thoughtId').get(getSingleThought);
+
 // /api/thoughts/:thoughtId/reactions
 router.route('/:thoughtId/reactions').post(addReaction);
 
