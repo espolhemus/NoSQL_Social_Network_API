@@ -1,5 +1,4 @@
 # No SQL Social_Network_API
-# Object-Relational Mapping (ORM): E-Commerce Back-End
 
 ## Description
 
