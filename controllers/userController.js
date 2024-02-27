@@ -105,6 +105,8 @@ module.exports = {
 
   // Add a friend to a user
   async addFriend(req, res) {
+    let requestUserID = req.params.userId;
+    let requestfriendID = req.params.friendId;
     try {
       const user = await User.findOneAndUpdate(
         { _id: req.params.userId },
@@ -114,7 +116,8 @@ module.exports = {
       );
 
       if (!user) {
-        return res.status(404).json({ message: 'No user found with that ID' });
+        // return res.status(404).json({ message: 'No user found with that ID', requestUserID, requestfriendID });
+        return res.status(404).send(`No user found with that ID ${requestUserID} ${requestfriendID}`);
       }
 
       res.json(user);
